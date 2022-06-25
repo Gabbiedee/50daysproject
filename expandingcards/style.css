@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: white;
+}
+
+.container{
+  display: flex;
+  width: 90vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel:first-child{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.panel{
+  height: 80vh;
+  margin: 5px;
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  flex: 0.1;
+  position: relative;
+  transition: 0.7s ease-in;
+ 
+}
+
+.panel h3{
+position: absolute;
+bottom: 50px;
+left: 20px;
+font-size: 2rem;
+transition: ease-in 0.5s;
+opacity: 0;
+}
+
+.panel ul, p{
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+  font-size: 1rem;
+  opacity: 0;
+}
+
+h4{
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1rem;
+  opacity: 0;
+}
+
+.panel p{
+  text-align: center;
+}
+
+.panel form{
+  border: 2px;
+  margin: 50px 10px;
+  background-color: white;
+  color: black;
+  padding: 50px 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px black;
+  transition: ease-in 0.5s;
+  opacity: 0;
+}
+
+input[type=text], input[type=tel], label, textarea{
+  margin: 0 10px
+}
+
+input[type=text], input[type=tel], textarea{
+  height: 20px;
+  border-radius: 5px;
+}
+
+input[type=text]:focus, input[type=tel]:focus, textarea:focus{
+  outline: none;
+  border-color: rgba(50, 50, 120, 1.0);
+}
+
+.btn{
+  padding: 5px 20px;
+  font-size: 15px;
+  color: white;
+  background-color: rgba(50, 50, 120, 1.0);
+  margin: 0 40px;
+  border-radius: 6px;
+  box-shadow: 2px 3px black;
+}
+
+.panel.active{
+flex: 5;
+}
+
+.panel.active h3, .panel.active ul, .panel.active p, .panel.active h4, .panel.active form{
+  opacity: 1;
+}
+
+
+
+@media (max-width: 480px){
+
+  .container{
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),.panel:nth-of-type(5){
+    display: none;
+  }
+
+}
+
